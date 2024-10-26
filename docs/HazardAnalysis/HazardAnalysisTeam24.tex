@@ -35,16 +35,6 @@ This document is the hazard analysis of the UNO Flip Remix game. It analyzes pot
 \section{Scope and Purpose of Hazard Analysis}
 The analysis focuses on identifying hazards related to user interaction, server reliability, AI behaviors, and multiplayer synchronization, and offers mitigation strategies to maintain gameplay integrity and security.
 
-The UNO Flip system includes:
-\begin{itemize}
-    \item The game client (browser-based app for users).
-    \item The server infrastructure (hosted on Firebase and utilizing WebSockets for real-time communication).
-    \item AI components for non-player character behaviors.
-    \item 3D rendering and animation libraries (such as Three.js).
-\end{itemize}
-
-Hazard is a property or condition in the system together with a condition in the environment that has the potential to cause harm or damage = loss (from Nancy Leveson's work).
-
 \section{System Boundaries and Components}
 The UNO Flip game project consists of several major software components:
 \begin{itemize}
@@ -69,8 +59,7 @@ The UNO Flip game project consists of several major software components:
 \end{itemize}
 
 \section{Failure Mode and Effect Analysis}
-% Table summarizing failure modes, effects, and mitigation strategies
-% Replace this comment with a detailed table based on your content.
+% Include a detailed table summarizing failure modes, effects, and mitigation strategies if available.
 
 \section{Safety and Security Requirements}
 \subsection{Access Requirements}
@@ -95,12 +84,33 @@ The UNO Flip game project consists of several major software components:
 \section{Roadmap}
 \begin{itemize}
     \item \textbf{Sept. 11, 2024}: Team formation and initial brainstorming.
-    \item \textbf{Sept. 23, 2024}: Initial idea rejected; added features for increased challenge.
-    \item \textbf{Oct. 11, 2024}: Scope and requirements analyzed in the SRS document.
-    \item \textbf{Oct. 25, 2024}: Hazard analysis completed with identified safety and security requirements.
+    \item \textbf{Sept. 23, 2024}: Our projects getting approved after adding desired feature, and the problems, statements and goal has been identified for this document, but need further clarification.
+    \item \textbf{Oct. 11, 2024}: The SRS document has analyzed the scope of our projects and requirements. There are still some part of our project been vague and needs more clarifications, and this will be done in the future documents
+
+    \item \textbf{Oct. 25, 2024}: The hazard analysis has identified several safety and security requirements, some of which will be implemented in the final application. However, due to time constraints, not all requirements may be addressed within the project timeframe. As the project progresses, we will regularly consult the hazard analysis to evaluate which risks have been mitigated and to identify any areas that still require further attention. The final review will assess the effectiveness of the implemented measures and guide future improvements.
+ requirements.
 \end{itemize}
 
+\newpage
+
 \section*{Appendix — Reflection}
-Reflection questions to assess individual and team learning experiences. Each team member should answer openly and honestly.
+The purpose of reflection questions is to assess your own learning and that of your group as a whole, and to find ways to improve in the future. Reflection is an important part of the learning process, essential for successful software development.
+
+\begin{itemize}
+    \item \textbf{1. What went well while writing this deliverable?}\\
+    Team members collaborated effectively and identified hazards systematically, which allowed for a comprehensive hazard analysis.
+
+    \item \textbf{2. What pain points did you experience during this deliverable, and how did you resolve them?}\\
+    Challenges arose in defining system boundaries clearly and categorizing hazards accurately. The team discussed these issues and revised sections collaboratively to reach a clearer understanding.
+
+    \item \textbf{3. Which of your listed risks had your team thought of before this deliverable, and which did you think of while doing this deliverable?}\\
+    Prior risks included server stability and user data integrity. New risks discovered during this process included specific gameplay interruptions due to network issues and risks associated with card management errors.
+
+    \item \textbf{4. Other than the risk of physical harm, list at least two other types of risks in software products. Why are they important to consider?}\\
+    \begin{enumerate}
+        \item \textbf{Data Privacy Risk}: Ensuring user data is secure and only accessible by authorized individuals is crucial for user trust and regulatory compliance.
+        \item \textbf{System Reliability Risk}: Preventing unexpected crashes and ensuring smooth gameplay are essential for user satisfaction and retention.
+    \end{enumerate}
+\end{itemize}
 
 \end{document}
