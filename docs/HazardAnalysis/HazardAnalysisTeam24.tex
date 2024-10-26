@@ -1,0 +1,106 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\title{Hazard Analysis}
+\author{Team 24}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Team Members}
+Jianhao Wei, Mingyang Xu, Kevin Ishak, Zain-Alabedeen Garada, Andy Liang
+
+\section*{Table of Revision History}
+\begin{longtable}{|l|l|l|}
+    \hline
+    Date & Developer(s) & Change \\
+    \hline
+    10/25/2024 & Mingyang Xu, Jiahao Wei, Kevin Ishak & Wrote sections 1-7 \\
+    10/25/2024 & Andy Liang & Wrote Appendix: Reflection for team and self \\
+    \hline
+\end{longtable}
+
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+This document is the hazard analysis of the UNO Flip Remix game. It analyzes potential hazards within the digital game project. Hazards are identified and assessed to ensure safety, data integrity, and uninterrupted gameplay, particularly in a multiplayer online setting.
+
+\section{Scope and Purpose of Hazard Analysis}
+The analysis focuses on identifying hazards related to user interaction, server reliability, AI behaviors, and multiplayer synchronization, and offers mitigation strategies to maintain gameplay integrity and security.
+
+The UNO Flip system includes:
+\begin{itemize}
+    \item The game client (browser-based app for users).
+    \item The server infrastructure (hosted on Firebase and utilizing WebSockets for real-time communication).
+    \item AI components for non-player character behaviors.
+    \item 3D rendering and animation libraries (such as Three.js).
+\end{itemize}
+
+Hazard is a property or condition in the system together with a condition in the environment that has the potential to cause harm or damage = loss (from Nancy Leveson's work).
+
+\section{System Boundaries and Components}
+The UNO Flip game project consists of several major software components:
+\begin{itemize}
+    \item \textbf{User Interface (UI)}: Handles player interaction, input validation, and displays the game state.
+    \item \textbf{Game Logic}: Controls gameplay mechanics, rule enforcement, and game state tracking.
+    \item \textbf{Networking Module}: Facilitates communication between players in multiplayer mode.
+    \item \textbf{Database or Game State Storage}: Manages saving of game progress, scores, and player data.
+    \item \textbf{Card Management System}: Manages cards' actions such as shuffling, drawing, and flipping.
+    \item \textbf{Server (if applicable)}: Manages player interactions and game sessions in an online environment.
+    \item \textbf{Audio/Visual Effects Module}: Enhances user experience with animations and sound cues.
+\end{itemize}
+
+\section{Critical Assumptions}
+\begin{itemize}
+    \item \textbf{User Inputs}: Players are assumed to provide valid inputs; however, validation will prevent illegal moves.
+    \item \textbf{Network Stability}: Assumes stable network connections; error handling will address potential disconnections.
+    \item \textbf{System Resources}: Assumes sufficient memory and processing power.
+    \item \textbf{Server Reliability}: Server can handle multiple game sessions without performance degradation.
+    \item \textbf{Deck Management}: Assumes proper shuffling and flipping mechanisms.
+    \item \textbf{Game Logic Accuracy}: Assumes bug-free game logic.
+    \item \textbf{Audio/Visual Synchronization}: Assumes correct synchronization of game cues.
+\end{itemize}
+
+\section{Failure Mode and Effect Analysis}
+% Table summarizing failure modes, effects, and mitigation strategies
+% Replace this comment with a detailed table based on your content.
+
+\section{Safety and Security Requirements}
+\subsection{Access Requirements}
+\begin{itemize}
+    \item AR1: Only server administrators can modify basic game features.
+    \item AR2: Only server administrators can modify user accounts, with user consent.
+\end{itemize}
+
+\subsection{Integrity Requirements}
+\begin{itemize}
+    \item IR1: The system should not unintentionally modify user information and game data.
+    \item IR2: The system should conduct regular authentication checks.
+    \item IR3: The app should store unsynced data locally and upload it when possible.
+\end{itemize}
+
+\subsection{Privacy Requirements}
+\begin{itemize}
+    \item PR1: The app should encrypt conversations and not save unencrypted chat data.
+    \item PR2: The app should not provide personal information to third parties.
+\end{itemize}
+
+\section{Roadmap}
+\begin{itemize}
+    \item \textbf{Sept. 11, 2024}: Team formation and initial brainstorming.
+    \item \textbf{Sept. 23, 2024}: Initial idea rejected; added features for increased challenge.
+    \item \textbf{Oct. 11, 2024}: Scope and requirements analyzed in the SRS document.
+    \item \textbf{Oct. 25, 2024}: Hazard analysis completed with identified safety and security requirements.
+\end{itemize}
+
+\section*{Appendix — Reflection}
+Reflection questions to assess individual and team learning experiences. Each team member should answer openly and honestly.
+
+\end{document}
